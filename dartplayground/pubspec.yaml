@@ -1,0 +1,8 @@
+name: gz
+description: Just a place to practice
+version: 0.0.1
+author: Ara
+
+dependencies:
+    webfeed: ^0.4.2
+    http: 0.12.0+2
