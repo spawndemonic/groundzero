@@ -6,3 +6,10 @@
 #include<arpa/inet.h>
 #include "tools.h"
 #define PORT 7980
+
+
+int main(void){
+  int socketfd;
+  struct sockaddr_in server_addr;
+  
+}
