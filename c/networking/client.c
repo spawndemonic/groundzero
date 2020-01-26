@@ -21,7 +21,15 @@ int main(void){
     fatal("In Socket");
   if((connect(socketfd, (struct sockaddr *) &server_addr,sizeof(server_addr)))==-1)
     fatal("Connection");
+  while(1){
+    for(int i=0;i<10000;i++){
+      //send(int socket, const void *buffer, size_t length, int flags)
+
+
+    }
  //recv(int socket, void *buffer, size_t length, int flags) 
   recv(socketfd,buffer,1024,0);
   printf("%s\n",buffer);
+  }
+  close(socketfd);
 }
