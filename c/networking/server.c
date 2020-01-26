@@ -17,7 +17,7 @@ int main(void){
 
   host_addr.sin_family = AF_INET;//assigning IPV4 address family
   host_addr.sin_port = htons(PORT);//convert port number to netowork short
-  host_addr.sin_addr.s_addr = 0;//automatically assign IP
+  host_addr.sin_addr.s_addr = htonl(INADDR_ANY);//automatically assign IP
   memset(&(host_addr.sin_zero), '\0', 8);
 
   if((socketfd = socket(AF_INET,SOCK_STREAM,0))==-1)
