@@ -16,6 +16,8 @@ int main(void){
   server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
   socklen_t addr_size;
   char buffer[1024];
+  char * key = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ";
+  char * temp;
 
   if((socketfd = socket(AF_INET,SOCK_STREAM,0))==-1)
     fatal("In Socket");
@@ -23,11 +25,13 @@ int main(void){
     fatal("Connection");
   while(1){
     for(int i=0;i<10000;i++){
-      //send(int socket, const void *buffer, size_t length, int flags)
+      strcpy(temp,key);
+      strcat(temp,i);
+     //send(int socket, const void *buffer, size_t length, int flags)
+     send(socketfd,temp,sizeof(temp),0);
 
-
+     //recv(int socket, void *buffer, size_t length, int flags) 
     }
- //recv(int socket, void *buffer, size_t length, int flags) 
   recv(socketfd,buffer,1024,0);
   printf("%s\n",buffer);
   }
