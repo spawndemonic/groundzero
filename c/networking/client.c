@@ -7,6 +7,11 @@
 #include "tools.h"
 #define PORT 7890
 
+char * ItoA(int val){
+    char * str;
+    itoa(val,str,10);
+    return str;
+}
 
 int main(void){
   int socketfd;
@@ -26,11 +31,12 @@ int main(void){
   while(1){
     for(int i=0;i<10000;i++){
       strcpy(temp,key);
-      strcat(temp,i);
+      strcat(temp,ItoA(i));
      //send(int socket, const void *buffer, size_t length, int flags)
      send(socketfd,temp,sizeof(temp),0);
 
      //recv(int socket, void *buffer, size_t length, int flags) 
+     recv(socketfd, &buffer, 1024,0);
     }
   recv(socketfd,buffer,1024,0);
   printf("%s\n",buffer);
