@@ -8,12 +8,12 @@
 #define PORT 7890
 char * ITOA(int num){
   char * crvt;
-gcvt(num,4,crvt);
+  snprintf(crvt,5,"%d",num);
 return crvt;
 }
 char * message(char*key,int num)
 {
-  char * msg = malloc(1024);
+  char * msg=malloc(sizeof(char)*50);
   strcat(msg,key);
   strcat(msg,ITOA(num));
   return msg;
@@ -29,7 +29,6 @@ int main(void){
   char buffer[1024];
   char * key = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ";
   char * temp;
-  
 
   if((socketfd = socket(AF_INET,SOCK_STREAM,0))==-1)
     fatal("In Socket");
@@ -37,9 +36,14 @@ int main(void){
     fatal("Connection");
   while(1){
     for(int i=1000;i<10000;i++){
-     strcat(temp,message(key,i));
+    // strcat(temp,message(key,i));
+    char * msg=malloc(sizeof(char)*50);
+    strcat(msg,key);
+    strcat(msg,ITOA(i));
      //send(int socket, const void *buffer, size_t length, int flags)
-     send(socketfd,temp,sizeof(temp),0);
+    if(send(socketfd,msg,strlen(msg),0)<1)
+      fatal("Sending");
+    
 
      //recv(int socket, void *buffer, size_t length, int flags) 
      recv(socketfd, &buffer, 1024,0);
