@@ -6,11 +6,17 @@
 #include<arpa/inet.h>
 #include "tools.h"
 #define PORT 7890
-
-char * ItoA(int val){
-    char * str;
-    itoa(val,str,10);
-    return str;
+char * ITOA(int num){
+  char * crvt;
+gcvt(num,4,crvt);
+return crvt;
+}
+char * message(char*key,int num)
+{
+  char * msg = malloc(1024);
+  strcat(msg,key);
+  strcat(msg,ITOA(num));
+  return msg;
 }
 
 int main(void){
@@ -23,15 +29,15 @@ int main(void){
   char buffer[1024];
   char * key = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ";
   char * temp;
+  
 
   if((socketfd = socket(AF_INET,SOCK_STREAM,0))==-1)
     fatal("In Socket");
   if((connect(socketfd, (struct sockaddr *) &server_addr,sizeof(server_addr)))==-1)
     fatal("Connection");
   while(1){
-    for(int i=0;i<10000;i++){
-      strcpy(temp,key);
-      strcat(temp,ItoA(i));
+    for(int i=1000;i<10000;i++){
+     strcat(temp,message(key,i));
      //send(int socket, const void *buffer, size_t length, int flags)
      send(socketfd,temp,sizeof(temp),0);
 
@@ -39,7 +45,7 @@ int main(void){
      recv(socketfd, &buffer, 1024,0);
     }
   recv(socketfd,buffer,1024,0);
-  printf("%s\n",buffer);
+//  printf("%s\n",buffer);
   }
   close(socketfd);
 }
