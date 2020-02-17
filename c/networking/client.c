@@ -7,14 +7,14 @@
 #include "tools.h"
 #define PORT 7890
 char * ITOA(int num){
-  char * crvt;
+  char * crvt=malloc(sizeof(char*)*5);
   snprintf(crvt,5,"%d",num);
 return crvt;
 }
 char * message(char*key,int num)
 {
   char * msg=malloc(sizeof(char)*50);
-  strcat(msg,key);
+  strcpy(msg,key);
   strcat(msg,ITOA(num));
   return msg;
 }
@@ -27,8 +27,8 @@ int main(void){
   server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
   socklen_t addr_size;
   char buffer[1024];
-  char * key = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ";
-  char * temp;
+  char * key = malloc(sizeof(char*)*34); 
+  key = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ ";
 
   if((socketfd = socket(AF_INET,SOCK_STREAM,0))==-1)
     fatal("In Socket");
@@ -36,20 +36,17 @@ int main(void){
     fatal("Connection");
   while(1){
     for(int i=1000;i<10000;i++){
-    // strcat(temp,message(key,i));
-    char * msg=malloc(sizeof(char)*50);
-    //strcat(msg,key);
-    //strcat(msg,ITOA(i));
+    char * msg;
     msg = message(key,i);
-     //send(int socket, const void *buffer, size_t length, int flags)
-    if(send(socketfd,msg,strlen(msg),0)<1)
+    //send(int socket, const void *buffer, size_t length, int flags)
+    if(send(socketfd,msg,strlen(msg)+1,0)<1)
       fatal("Sending");
     
 
      //recv(int socket, void *buffer, size_t length, int flags) 
-     recv(socketfd, &buffer, 1024,0);
+     //recv(socketfd, buffer, 1024,0);
+     //printf("%s",buffer);
     }
-  recv(socketfd,buffer,1024,0);
 //  printf("%s\n",buffer);
   }
   close(socketfd);
