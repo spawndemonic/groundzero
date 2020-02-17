@@ -38,8 +38,9 @@ int main(void){
     for(int i=1000;i<10000;i++){
     // strcat(temp,message(key,i));
     char * msg=malloc(sizeof(char)*50);
-    strcat(msg,key);
-    strcat(msg,ITOA(i));
+    //strcat(msg,key);
+    //strcat(msg,ITOA(i));
+    msg = message(key,i);
      //send(int socket, const void *buffer, size_t length, int flags)
     if(send(socketfd,msg,strlen(msg),0)<1)
       fatal("Sending");
