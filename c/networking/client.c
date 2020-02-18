@@ -34,6 +34,9 @@ int main(void){
     fatal("In Socket");
   if((connect(socketfd, (struct sockaddr *) &server_addr,sizeof(server_addr)))==-1)
     fatal("Connection");
+     //recv(int socket, void *buffer, size_t length, int flags) 
+     //recv(socketfd, buffer, 1024,0);
+     //printf("%s",buffer);
   while(1){
     for(int i=1000;i<10000;i++){
     char * msg;
@@ -43,9 +46,6 @@ int main(void){
       fatal("Sending");
     
 
-     //recv(int socket, void *buffer, size_t length, int flags) 
-     //recv(socketfd, buffer, 1024,0);
-     //printf("%s",buffer);
     }
 //  printf("%s\n",buffer);
   }
