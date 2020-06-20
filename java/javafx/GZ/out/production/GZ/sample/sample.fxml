@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.8919597989949749" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.8919597989949749" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="465.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <items>
       <ScrollPane prefHeight="200.0" prefWidth="200.0">
          <content>
@@ -74,10 +74,10 @@
             </VBox>
          </content>
       </ScrollPane>
-      <AnchorPane prefHeight="184.0" prefWidth="598.0">
+      <AnchorPane prefHeight="100.0" prefWidth="650">
          <children>
-            <Button layoutX="436.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Add Url" />
-            <Button layoutX="508.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Refresh" />
+            <Button layoutX="436.0" layoutY="8.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="84.0" text="Add Url" />
+            <Button layoutX="537.0" layoutY="9.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="94.0" text="Refresh" />
             <TextField layoutX="8.0" layoutY="8.0" prefHeight="25.0" prefWidth="412.0" />
          </children>
       </AnchorPane>

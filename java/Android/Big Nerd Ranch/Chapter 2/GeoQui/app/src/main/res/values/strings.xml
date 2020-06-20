@@ -5,7 +5,12 @@
     <string name="false_button">False</string>
     <string name="correct_toast">Correct!</string>
     <string name="incorrect_toast">Incorrect!</string>
+    <string name="eol">End of list</string>
+    <string name="fol">Front of list</string>
     <string name="next_button">Next</string>
+    <string name="next_desc">Move to next statement</string>
+    <string name="previous_desc">Move to previous statement</string>
+    <string name="previous_button">Previous</string>
     <string name="question_oceans">The Pacific Ocean is larger than the Atlantic.</string>
     <string name="question_mideast">The Suez Canal connects the read sea and the Indian Ocean.</string>
     <string name="question_africa">The source of the Nile River is in Egypt.</string>
