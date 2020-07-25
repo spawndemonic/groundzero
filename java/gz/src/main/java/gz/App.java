@@ -1,5 +1,12 @@
 package gz;
 
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 /**
  * Hello world!
  *
@@ -14,8 +21,14 @@ package gz;
 //article are in <article></article>
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {
-        System.out.println( "Hello World!" );
+        Document d = Jsoup.connect("https://duckduckgo.com/?t=ffab&q=witchcraft&atb=v229-5rk&ia=web").get();
+        Elements ele = d.select("div#links");
+        for(Element element : ele.select("div.result"))
+        {
+            String title= element.select("dev.result__title a.result__a").text();
+            System.out.println(title);
+        }
     }
 }
