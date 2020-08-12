@@ -1,0 +1,15 @@
+{
+  "name": "gz",
+  "version": "1.0.0",
+  "description": "groundzero for nodejs",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "author": "Me duh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
