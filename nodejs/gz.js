@@ -2,18 +2,26 @@ var http = require('http');
 var url = require('url');
 var dt = require('./firsmod');
 var fs = require('fs');
+var formidable = require('formidable');
 
 http.createServer(function(req,res){
-  var urlParse = url.parse(req.url, true);
-  var filename = "."+urlParse.pathname;
-  fs.readFile(filename,function(err,data){
-    if(err){
-      res.writeHead(404,{'Content-Type':'text/html'});
-      return res.end("404 Not Found");
+  if(req.url == '/fileupload'){
+    var form = new formidable.IncomingForm();
+    form.parse(req, function(err,fields,files){
+      var oldpath = files.filetoupload.path;
+      var newpath = '/home/black/'+files.filetoupload.name;
+      fs.rename(oldpath,newpath,function(err){
+        if(err)throw err;
+        res.write('File uploaded and moved!');
+        res.end();
+      });
+    });
+  }
+ else{
+   fs.readFile('main.html', function(err,data){
+   res.writeHead(200,{'Content-Type':'text/html'});
+   res.write(data);
+   return res.end();
+   });
     }
-    res.writeHead(200,{'Content-Type':"text/html"});
-    res.write(data);
-    return res.end();
-  });
-  
 }).listen(8080);
