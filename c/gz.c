@@ -19,14 +19,6 @@ char * message(char*key,int num)
 
 
 int main (void){
-  char buff[50];
-  char * key = "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ";
-    char * tmp= ITOA(1000);
-  strcat(buff,key);
-  strcat(buff,tmp);
-  printf("%s",buff);
-  //for(int i =1000;i<1005;i++){
-  //printf("%s",ITOA(i));
-  //}
+
   return 0;
 }
