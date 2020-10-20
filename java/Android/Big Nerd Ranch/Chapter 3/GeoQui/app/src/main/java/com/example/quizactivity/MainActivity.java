@@ -3,6 +3,7 @@ package com.example.quizactivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
             new Question(R.string.question_asia,true),
     };
     private int mCurrentIndex=0;
+    private static final String TAG = "QuizActivity";
+    private static final String KEY_INDEX = "index";
+
 
     public static Button getmTrueButton() {
         return mTrueButton;
@@ -45,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 checkAnswer(true);
             }
         });
+        if(savedInstanceState != null)
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX,0);
 
 
         mFalsebutton = (Button) findViewById(R.id.false_button);
@@ -63,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     updateQuestion();
                 }
                 else {
-                    Toast.makeText(MainActivity.this, R.string.eol, Toast.LENGTH_SHORT).show();
+                    Toast.makeText( MainActivity.this, R.string.eol, Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -83,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
         });
         updateQuestion();
     }
+    /*Best practice is to save data in a database and override with id to call*/
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        Log.i(TAG,"onSaveInstanceState");
+        savedInstanceState.putInt(KEY_INDEX,mCurrentIndex);
+    }
+
     private void updateQuestion(){
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);

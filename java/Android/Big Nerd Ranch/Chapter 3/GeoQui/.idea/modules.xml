@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GeoQui.iml" filepath="$PROJECT_DIR$/.idea/GeoQui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/QuizActivity.iml" filepath="$PROJECT_DIR$/.idea/modules/QuizActivity.iml" group="QuizActivity" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="QuizActivity/app" />
     </modules>
   </component>
 </project>
