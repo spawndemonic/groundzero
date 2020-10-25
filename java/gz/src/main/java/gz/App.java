@@ -1,4 +1,4 @@
-package javagz;
+package gz;
 
 import java.awt.BorderLayout;
 import java.io.IOException;

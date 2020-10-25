@@ -53,15 +53,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0064b7ad-be72-44e4-8abe-ad01235148ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gz.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_13_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gz.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gz/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gz/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gz/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gz/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/gz-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/gz-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
@@ -69,6 +72,7 @@
       <change beforePath="$PROJECT_DIR$/target/original-gz-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-gz-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-gz.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-gz.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/gz.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/gz.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/gz/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/gz/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -99,16 +103,35 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.console">
-    <configuration name="console" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+  <component name="RunManager" selected="JAR Application.original-gz-1.0.jar">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="gz.App" />
       <module name="gz" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="console" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="gz.App" />
+      <module name="gz" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gz-1.0-shaded.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/gz-1.0-shaded.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gz-1.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/gz-1.0.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="original-gz-1.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/original-gz-1.0.jar" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -149,7 +172,7 @@
             <option name="profilesMap">
               <map />
             </option>
-            <option name="resolveToWorkspace" value="false" />
+            <option name="resolveToWorkspace" value="true" />
             <option name="workingDirPath" value="$PROJECT_DIR$" />
           </MavenRunnerParameters>
         </option>
@@ -158,8 +181,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.console" />
+      <item itemvalue="JAR Application.gz-1.0-shaded.jar" />
+      <item itemvalue="JAR Application.gz-1.0.jar" />
+      <item itemvalue="JAR Application.original-gz-1.0.jar" />
       <item itemvalue="Maven.gz []" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.original-gz-1.0.jar" />
+        <item itemvalue="JAR Application.gz-1.0-shaded.jar" />
+        <item itemvalue="JAR Application.gz-1.0.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -185,33 +218,44 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="1271" width="1073" height="889" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603599612157">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state x="552" y="160" key="#Plugins" timestamp="1603667842823">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="160" key="#Plugins/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667842823" />
+    <state x="356" y="53" width="1073" height="977" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603667636130">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="356" y="53" width="1073" height="977" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667636130" />
     <state x="424" y="1271" width="1073" height="889" key="#com.intellij.execution.impl.EditConfigurationsDialog/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603599612157" />
-    <state x="697" y="1426" width="527" height="583" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603599607967">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state x="696" y="333" width="527" height="583" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603667564425">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="696" y="333" key="#com.intellij.ide.util.TreeClassChooserDialog/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667564425" />
     <state x="697" y="1426" width="527" height="583" key="#com.intellij.ide.util.TreeClassChooserDialog/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603599607967" />
-    <state x="748" y="1379" key="FileChooserDialogImpl" timestamp="1603574130663">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state x="747" y="288" key="FileChooserDialogImpl" timestamp="1603667448549">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="747" y="288" key="FileChooserDialogImpl/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667448549" />
     <state x="748" y="1379" key="FileChooserDialogImpl/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603574130663" />
-    <state width="1874" height="248" key="GridCell.Tab.0.bottom" timestamp="1603575147853">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1603667816753">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667816753" />
     <state width="1874" height="248" key="GridCell.Tab.0.bottom/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603575147853" />
-    <state width="1874" height="248" key="GridCell.Tab.0.center" timestamp="1603575147853">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1603667816753">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667816753" />
     <state width="1874" height="248" key="GridCell.Tab.0.center/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603575147853" />
-    <state width="1874" height="248" key="GridCell.Tab.0.left" timestamp="1603575147853">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1603667816752">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667816752" />
     <state width="1874" height="248" key="GridCell.Tab.0.left/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603575147853" />
-    <state width="1874" height="248" key="GridCell.Tab.0.right" timestamp="1603575147853">
-      <screen x="1" y="1080" width="1920" height="1080" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1603667816753">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603667816753" />
     <state width="1874" height="248" key="GridCell.Tab.0.right/1.1080.1920.1080/0.0.1920.1080@1.1080.1920.1080" timestamp="1603575147853" />
   </component>
 </project>
