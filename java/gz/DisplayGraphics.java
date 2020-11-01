@@ -1,4 +1,3 @@
-package gz;
 
 import java.awt.*;
 
