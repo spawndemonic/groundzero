@@ -1,10 +1,10 @@
-package gz;
+package gz.displays;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-class DisplayWindow implements ActionListener{
+public class DisplayWindow implements ActionListener{
     //component declarations
     JPanel panelA = new JPanel();
     JPanel panelB = new JPanel();
