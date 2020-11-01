@@ -8,9 +8,9 @@ public class DisplayGraphics extends Canvas {
         setBackground(Color.BLACK);
     }
     public void paint(Graphics g){
+    g.setColor(Color.BLUE);
     g.drawOval(130,130,50,60);
     g.fillOval(130,130,50,60);
-    g.setColor(Color.BLUE);
     }
 
 }
