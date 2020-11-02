@@ -33,7 +33,6 @@ public class DisplayWindow{
         //set center
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        graphics.movePaint();
     }
 
 }
