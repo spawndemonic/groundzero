@@ -18,10 +18,6 @@ public class DisplayWindow{
     JButton addItem = new JButton("Add Task");
     JButton moveGraphic = new JButton("Move Graphic");
     DisplayGraphics graphics = new DisplayGraphics();
-    String column[]={"Tasks","Due Date","Priority"};
-    String tasks[][]= {{"Do Laundry","tomorrw","urgent"},
-            {"finish swing project","end of week","urgent"}};
-    JTable jt = new JTable(tasks,column);
     public DisplayWindow() {
         addItem.addActionListener(new TaskController());
         moveGraphic.addActionListener(new GraphicsController(graphics));
@@ -29,14 +25,15 @@ public class DisplayWindow{
         panelB.add(moveGraphic);
         panelA.add(panelB);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(700, 500);
         // adds components like button to layout
-        frame.getContentPane().add(BorderLayout.CENTER,new JScrollPane(jt));
+        frame.getContentPane().add(BorderLayout.CENTER,graphics);
         frame.getContentPane().add(BorderLayout.SOUTH, panelA);
+
+        frame.setSize(500, 300);
         //set center
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
+        graphics.movePaint();
     }
 
 }
