@@ -3,14 +3,15 @@ package sample;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+//import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.Text;
+//import javafx.scene.layout.BorderPane;
+//import javafx.scene.layout.GridPane;
+//import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+
 
 
 
@@ -23,7 +24,7 @@ public class Main extends Application {
         Button b2 = new Button("add new url");
         TextField url = new TextField();
         TextArea feed = new TextArea();
-       //  //Grid settings
+       //Grid settings
        // GridPane grid = new GridPane();
        // grid.setGridLinesVisible(true);
        // grid.setHgap(10);
@@ -43,7 +44,7 @@ public class Main extends Application {
         //grid.getChildren().addAll(b1,b2,feed,url);
         primaryStage.setTitle("Rss Feed");
         //                              layout,width,height
-        primaryStage.setScene(new Scene(root, 600, 500));
+        //primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
     }
 

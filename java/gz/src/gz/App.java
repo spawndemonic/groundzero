@@ -1,5 +1,5 @@
 package gz;
-import gz.displays.*;
+import gz.displays.DisplayWindow;
 class App extends DisplayWindow {
     public App(){
       super();
