@@ -11,6 +11,10 @@ fun main(){
     println(playerStatus);
     println("Karma: $karma");
     castFireball();
+    val printer: () -> String = {
+        "Hello"
+    }
+    println(printer())
 
 }
 
@@ -43,3 +47,7 @@ private fun getStatus(playerHealth: Int, isBlessed: Boolean)=
     };
 private fun castFireball (numFireballs:Int = 2) =
     println("A glass of Fireball springs into existence. (x$numFireballs)")
+fun anonFunmess(){
+    val numLetters= "mississippi".count(){letter->letter ==  's'};
+    print(numLetters);
+}
