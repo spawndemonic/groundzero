@@ -1,21 +1,28 @@
+
+
 fun main(){
-    val name = "madrigal";
-    var playerHealth = 74;
-    val karma = (Math.pow(Math.random(),(110-playerHealth)/100.0)*20).toInt()
-    val isBlessed = true;
-    val isImmortal = false;
-    val aura = isBlessed && playerHealth > 50 || isImmortal;
-    val playerStatus = getStatus(playerHealth, isBlessed);
-    val auracolor = auraColor(isBlessed, playerHealth, isImmortal);
-    printPlayerStatus(auracolor, isBlessed, name, playerStatus);
+    val player = Player()
+    val playerStatus = player.getStatus();
+    val auracolor = player.auraColor();
+    printPlayerStatus(auracolor, player.isBlessed, player.name, playerStatus);
     println(playerStatus);
-    println("Karma: $karma");
-    castFireball();
-    val printer: () -> String = {
-        "Hello"
+    player.castFireball();
+    val printer = {
+        val name = "bob"
+        "Hello $name"
+    }
+    val greetingFun :(String,Int) ->String ={playername,numBuildings ->
+        val currentYear = 2020
+       println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playername (Copyright $currentYear)"
+    }
+    val greetingFun2 ={ playerName: String, numBuildings: Int ->
+        val currentYear = 2020
+        println("building $numBuildings houses")
+        "Welcome $playerName (copybullshit $currentYear)"
     }
     println(printer())
-
+    println(greetingFun2("Bob",3))
 }
 
 private fun printPlayerStatus(
@@ -28,25 +35,7 @@ private fun printPlayerStatus(
     println("$name $playerStatus");
 }
 
-private fun auraColor(isBlessed: Boolean, playerHealth: Int, isImmortal: Boolean):String {
-    val auraVisible = isBlessed && playerHealth > 50 || isImmortal;
-    return if (auraVisible) "GREEN" else "NONE";
 
-}
-
-private fun getStatus(playerHealth: Int, isBlessed: Boolean)=
-    when (playerHealth) {
-        100 -> "Damn fine"
-        in 90..99 -> "ight"
-        in 75..89 -> if (isBlessed) {
-            "Hurt but covered"
-        } else {
-            "hurt"
-        }
-        else -> "Sucks to be me"
-    };
-private fun castFireball (numFireballs:Int = 2) =
-    println("A glass of Fireball springs into existence. (x$numFireballs)")
 fun anonFunmess(){
     val numLetters= "mississippi".count(){letter->letter ==  's'};
     print(numLetters);
