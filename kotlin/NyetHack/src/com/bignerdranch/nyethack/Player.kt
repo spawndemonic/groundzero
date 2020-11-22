@@ -1,3 +1,5 @@
+package com.bignerdranch.nyethack
+
 class Player{
     val name = "madrigal"
         get() = field.capitalize()
