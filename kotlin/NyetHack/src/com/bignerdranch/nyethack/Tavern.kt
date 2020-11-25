@@ -8,6 +8,10 @@ fun main(){
             "Buttered Ale"
         }
     }
+    var beverageServed = beverage ?: "Buttered Ale"
+    beverage?.let {
+        beverage=it.capitalize()
+    }?: println("Can't be null")
         print("How old are you?")
         var canDrink = readLine()?.let {
             if (it.toInt() < 21) {
@@ -16,6 +20,7 @@ fun main(){
             } else {
                 true
             }
+
         }
 
 
