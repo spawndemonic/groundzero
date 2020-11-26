@@ -24,6 +24,7 @@ fun main(){
     println(printer())
     println(greetingFun2("Bob",3))
     println(player.hometown)
+    println(player.name)
 }
 
 private fun printPlayerStatus(

@@ -11,6 +11,7 @@ fun main(){
     }
     try {
         proficiencyCheck(swordsJuggling)
+        //forces the additon of 1 even if null
         swordsJuggling = swordsJuggling!!.plus(1)
         println("You juggle $swordsJuggling swords")
     }catch (e: Exception){
@@ -19,6 +20,9 @@ fun main(){
 }
 fun proficiencyCheck(swordsJuggling: Int?){
     checkNotNull(swordsJuggling,{"Player can't juggle for shit"})
+}
+fun juggleSwords(swordsJuggling: Int){
+    require(swordsJuggling >=3,{"Juggle at least 3 swords to be exciting"})
 }
 class UnskilledSwordJugglerException():
         IllegalStateException("Player cannot juggle for shit")
