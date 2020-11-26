@@ -1,5 +1,6 @@
 package com.bignerdranch.nyethack
 
+import java.lang.Exception
 import java.lang.IllegalStateException
 
 fun main(){
@@ -8,10 +9,16 @@ fun main(){
     if (isJugglingProficient){
         swordsJuggling = 2
     }
-    proficiencyCheck(swordsJuggling)
-    swordsJuggling = swordsJuggling!!.plus(1)
-    println("You juggle $swordsJuggling swords")
+    try {
+        proficiencyCheck(swordsJuggling)
+        swordsJuggling = swordsJuggling!!.plus(1)
+        println("You juggle $swordsJuggling swords")
+    }catch (e: Exception){
+        println(e)
+    }
 }
 fun proficiencyCheck(swordsJuggling: Int?){
-    swordsJuggling ?: throw IllegalStateException("Player cannot juggle for shit")
+    checkNotNull(swordsJuggling,{"Player can't juggle for shit"})
 }
+class UnskilledSwordJugglerException():
+        IllegalStateException("Player cannot juggle for shit")
