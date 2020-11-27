@@ -21,6 +21,8 @@ fun main(){
         println("building $numBuildings houses")
         "Welcome $playerName (copybullshit $currentYear)"
     }
+    var currentRoom = Room("foyer")
+    println(currentRoom.description())
     println(printer())
     println(greetingFun2("Bob",3))
     println(player.hometown)
