@@ -1,7 +1,7 @@
 package com.bignerdranch.nyethack
 
 fun main(){
-    val player = Player()
+    val player = Player("Frank")
     val playerStatus = player.getStatus();
     val auracolor = player.auraColor();
     printPlayerStatus(auracolor, player.isBlessed, player.name, playerStatus);
@@ -21,8 +21,12 @@ fun main(){
         println("building $numBuildings houses")
         "Welcome $playerName (copybullshit $currentYear)"
     }
+    var currentRoom = Room("foyer")
+    println(currentRoom.description())
     println(printer())
     println(greetingFun2("Bob",3))
+    println(player.hometown)
+    println(player.name)
 }
 
 private fun printPlayerStatus(
