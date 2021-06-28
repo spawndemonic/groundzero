@@ -1,5 +1,7 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
-    kotlin("multiplatform") version "1.4.32"
+    kotlin("jvm") version "1.5.20"
 }
 
 group = "me.black"
@@ -9,15 +11,15 @@ repositories {
     mavenCentral()
 }
 
-kotlin {
-    
-    sourceSets {
-        val commonMain by getting
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
-            }
-        }
-    }
+dependencies {
+    testImplementation(kotlin("test"))
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+}
+
+tasks.test {
+    useJUnit()
+}
+
+tasks.withType<KotlinCompile>() {
+    kotlinOptions.jvmTarget = "1.8"
 }
